@@ -20,14 +20,25 @@ Packages Requirements:
 
 -> Clone 101_Object_Classification repo
 -> Download the dataset from Caltech Website
--> Extract in working forlder
--> Use "resizeme.py" python script to resize and rename images for NN training
+-> Extract dataset in working forlder 
+
+-> Use "resizeme.py" python script to automatically resize and rename images for NN training. 70% of the dataset is used for training and 30% for validation. The dataset is automatically splitted using the script "resizeme.py"
+
+The samples are now organized regarding the following structure:
+Train/SUBFOLDER_0/CLASS0_IMG1.jpg
+Train/SUBFOLDER_0/CLASS0_IMG2.jpg
+...
+Validate/SUBFOLDER_101/CLASS101_IMG15.jpg
 
 2) Training
 
 -> Launch train.py
+-> Use "tensorboard --logdir=logs" to monitor training in your favorite browser
 
 3) Testing
 
 -> Launch predict.py
+-> Monitor accuracy regarding unknown examples
+
+
 
